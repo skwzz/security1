@@ -1,7 +1,6 @@
 package com.skwzz.security1.model;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.springframework.data.annotation.CreatedDate;
 
@@ -12,9 +11,11 @@ import javax.persistence.Id;
 import java.security.Timestamp;
 import java.time.LocalDateTime;
 
+@Builder
+@Data
 @Entity
-@Getter
-@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
